@@ -1,8 +1,19 @@
 .head-hunter {
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    &__title {
-    }
+  &__title {
+    margin-bottom: 10px;
+  }
 
-    &__logo {
+  &__logo {
+    width: 70px;
+
+    @media (max-width: 600px) {
+      width: 60px;
     }
+  }
 }

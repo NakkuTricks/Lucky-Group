@@ -3,10 +3,24 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 15%;
+  width: 200px;
 
   padding: 30px 20px;
 
   background-color: #000000;
   color: white;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 20px 10px;
+    align-items: center;
+  }
+
+  &__logo {
+    @media (max-width: 600px) {
+      width: 65%;
+
+      margin-bottom: 20px;
+    }
+  }
 }
