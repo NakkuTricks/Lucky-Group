@@ -1,0 +1,25 @@
+{
+  "name": "Lucky-Group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build <your entry file>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakkuTricks/Lucky-Group.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NakkuTricks/Lucky-Group/issues"
+  },
+  "homepage": "https://github.com/NakkuTricks/Lucky-Group#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.11"
+  }
+}
