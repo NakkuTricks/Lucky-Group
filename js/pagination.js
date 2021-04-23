@@ -12,7 +12,8 @@ const params = new URLSearchParams(query);
 let perPage = Number(params.get("per-page"));
 
 function pagination() {
-    getPhotos(currentPage, perPage = 3)
+    if (perPage === 0) perPage = 10;
+    getPhotos(currentPage, perPage)
         .then(photos => {
             if (photos.length) {
                 for (let {url,title} of photos) {

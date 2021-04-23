@@ -426,7 +426,6 @@ export const getPhotos = function(currentPage, perPage) {
     // return fetch(`${API_URL}/photos?_page="${currentPage}"&_limit="${perPage}"`)
     //         .then(value => value.json())
     //         .catch(error => console.log(error));
-
     return Promise.resolve(mock).then(photos => {
         const start = (currentPage - 1) * perPage;
         const end = start + perPage;
