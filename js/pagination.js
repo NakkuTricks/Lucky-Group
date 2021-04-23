@@ -9,13 +9,13 @@ const query = window.location.search;
 const params = new URLSearchParams(query);
 const perPage = Number(params.get("per-page"));
 
-function pagination() {
-    const photoCount = photos.splice(0, perPage);
-    if (photoCount.length) {
+function pagination(amount) {
+    const photoAmount = photos.splice(0, amount);
+    if (photoAmount.length) {
         for (let {
                 url,
                 title
-            } of photoCount) {
+            } of photoAmount) {
             list.insertAdjacentHTML("beforeend", `
                 <li class="content__item">
                     <figure class="content__item-wrapper">
@@ -31,7 +31,7 @@ function pagination() {
 
 const intersectionObserver = new IntersectionObserver(entries => {
     if (entries.some(elem => elem.intersectionRatio > 0)) {
-        pagination();
+        pagination(perPage);
     }
 });
 intersectionObserver.observe(emptyElem);
