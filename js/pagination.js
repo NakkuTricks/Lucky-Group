@@ -1,5 +1,5 @@
 import {
-    photos
+    getPhotos
 } from "./api/photos";
 
 const list = document.querySelector(".content__list");
@@ -8,6 +8,9 @@ const emptyElem = document.querySelector(".empty-elem");
 const query = window.location.search;
 const params = new URLSearchParams(query);
 const perPage = Number(params.get("per-page"));
+
+let photos = [];
+getPhotos().then(value => photos = value);
 
 function pagination(amount = 8) {
     const photoAmount = photos.splice(0, amount);
@@ -33,4 +36,5 @@ const intersectionObserver = new IntersectionObserver(entries => {
         pagination(perPage);
     }
 });
+
 intersectionObserver.observe(emptyElem);

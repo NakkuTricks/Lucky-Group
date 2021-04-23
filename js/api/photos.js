@@ -2,7 +2,7 @@ import {
     API_URL
 } from "../constants";
 
-export const photos = [{
+const mock = [{
         "albumId": 1,
         "id": 1,
         "title": "accusamus beatae ad facilis cum similique qui sunt",
@@ -424,11 +424,10 @@ export const photos = [{
     }
 ];
 
-// function getPhotos() {
-//     fetch(`${API_URL}/photos`)
-//         .then(value => value.json())
-//         .then(value => photos.push(value))
-//         .catch(error => console.log(error))
-// };
+export const getPhotos = function() {
+    // return fetch(`${API_URL}/photos`)
+    //         .then(value => value.json())
+    //         .catch(error => console.log(error));
 
-// getPhotos();
+    return Promise.resolve(mock)
+};
